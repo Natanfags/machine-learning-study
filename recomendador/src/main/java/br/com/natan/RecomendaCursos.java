@@ -10,9 +10,9 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 
 public class RecomendaCursos {
 	public static void main(String[] args) throws IOException, TasteException {
-		DataModel cursos = new Recomendador().getModeloCursos();
+		DataModel cursos = new Recomendador().getModeloDeCursos();
 		Recommender recommender = new RecomendadoBuilder().buildRecommender(cursos);
-		List<RecommendedItem> recommendations = recommender.recommend(15, 6);
+		List<RecommendedItem> recommendations = recommender.recommend(15, 600);
 		for (RecommendedItem recommendation : recommendations) {
 			System.out.println(recommendation);
 		}

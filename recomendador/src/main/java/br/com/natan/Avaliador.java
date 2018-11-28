@@ -15,7 +15,7 @@ public class Avaliador {
 
 		RandomUtils.useTestSeed();
 
-		DataModel modelo = new Recomendador().getModeloCursos();
+		DataModel modelo = new Recomendador().getModeloDeCursos();
 
 		RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
 		RecommenderBuilder builder = new RecomendadoBuilder();
