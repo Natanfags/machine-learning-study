@@ -14,7 +14,7 @@ public class Recomendador {
 	}
 
 	private DataModel getModelo(String path) throws IOException {
-		File file = new File(path);
+		File file = new File("src/main/resources/" + path);
 		return new FileDataModel(file);
 	}
 
