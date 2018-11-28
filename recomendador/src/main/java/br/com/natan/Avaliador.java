@@ -15,11 +15,11 @@ public class Avaliador {
 
 		RandomUtils.useTestSeed();
 
-		DataModel produtos = new Recomendador().getModeloDeProdutos();
+		DataModel modelo = new Recomendador().getModeloCursos();
 
 		RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
-		RecommenderBuilder builder = new RecomendadorDeProdutosBuilder();
-		double erro = evaluator.evaluate(builder, null, produtos, 0.9, 1.0);
+		RecommenderBuilder builder = new RecomendadoBuilder();
+		double erro = evaluator.evaluate(builder, null, modelo, 0.9, 1.0);
 		System.out.println(erro);
 
 	}

@@ -11,8 +11,8 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 public class RecomendaProdutos {
 	public static void main(String[] args) throws IOException, TasteException {
 
-		DataModel produtos = new Recomendador().getModeloDeProdutos();
-		Recommender recommender = new RecomendadorDeProdutosBuilder().buildRecommender(produtos);
+		DataModel produtos = new Recomendador().getModeloCursos();
+		Recommender recommender = new RecomendadoBuilder().buildRecommender(produtos);
 
 		List<RecommendedItem> recommendations = recommender.recommend(2, 4);
 		for (RecommendedItem recommendation : recommendations) {
